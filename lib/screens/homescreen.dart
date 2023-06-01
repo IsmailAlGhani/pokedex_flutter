@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:poke_app/model/data.dart';
-import 'package:poke_app/screens/pokemon.dart';
 import 'package:poke_app/widgets/loading_spinner.dart';
 import 'package:provider/provider.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -66,7 +65,6 @@ class _HomeScreenState extends State<HomeScreen>
         builder: (context, data, child) {
           var isMore = data.isMore;
           var offset = data.offset;
-          var limit = data.limit;
           if (data.loading && offset == 0 && data.pokemonList.isEmpty) {
             return const LoadingSpinner();
           }
