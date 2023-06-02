@@ -71,9 +71,7 @@ class Data extends ChangeNotifier {
       }
       updatePokemonList(data);
       updateLoading(false);
-      debugPrint('prevOffset: $_offset');
       updateOffset();
-      debugPrint('nextOffset: $_offset');
     } catch (error) {
       debugPrint('error: $error');
       updateLoading(false);
